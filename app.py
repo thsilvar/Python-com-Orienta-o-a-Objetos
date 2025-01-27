@@ -15,5 +15,12 @@ print('4. Sair \n')
 
 opcao_escolhida = input('Digite a opção desejada: ')
 
-print(f'Opção escolhida: {opcao_escolhida}')
+if opcao_escolhida == '1':
+    print('Cadastrar restaurante')
+elif opcao_escolhida == '2':
+    print('Listar restaurante')
+elif opcao_escolhida == '3':
+    print('Ativar restaurante')
+elif opcao_escolhida == '4':
+    print('Sair')
 
