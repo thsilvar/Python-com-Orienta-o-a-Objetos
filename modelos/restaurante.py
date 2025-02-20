@@ -1,11 +1,11 @@
-class Restautante:
+class Restaurante:
     restaurantes = []
 
     def __init__(self, nome, categoria):
         self._nome = nome.title()
         self._categoria = categoria.upper()
         self._ativo = False
-        Restautante.restaurantes.append(self)
+        Restaurante.restaurantes.append(self)
 
     def __str__(self):
         return f'{self._nome} ({self._categoria})'
@@ -23,9 +23,5 @@ class Restautante:
     def alternar_status(self):
         self._ativo = not self._ativo
 
-restaurante_praca = Restautante('restaurante da Praça', 'Comida Brasileira')
-restaurante_praca.alternar_status()
-restaurante_pizza = Restautante('Pizzaria do Bairro', 'Pizzaria')
 
-Restautante.listar_restaurantes()
 
