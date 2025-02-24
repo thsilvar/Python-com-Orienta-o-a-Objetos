@@ -7,6 +7,11 @@ restaurante_japones = Restaurante('Sushi da Esquina', 'Comida Japonesa')
 
 restaurante_praca.alternar_status()
 
+restaurante_praca.receber_avaliar('João', 4)
+restaurante_praca.receber_avaliar('Maria', 5)
+restaurante_praca.receber_avaliar('José', 3)
+
+
 def main():
     Restaurante.listar_restaurantes()
 
