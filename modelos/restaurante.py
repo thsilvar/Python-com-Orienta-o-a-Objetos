@@ -28,12 +28,14 @@ class Restaurante:
 
     def receber_avaliar(self, cliente, nota):
         avaliacao = Avaliacao(cliente, nota)
+        if(not avaliacao.validar_nota()):
+            return print('Nota inválida')
         self._avaliacao.append(avaliacao)
 
     @property
     def media_avaliacoes(self):
         if not self._avaliacao:
-            return 0
+            return str('Sem avaliações')
         media = sum([avaliacao._nota for avaliacao in self._avaliacao]) / len(self._avaliacao)
         return round(media, 1)
 
