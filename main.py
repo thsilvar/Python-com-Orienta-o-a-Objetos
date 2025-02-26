@@ -6,11 +6,18 @@ app = FastAPI()
 
 @app.get('/api/hello')
 def read_root():
+    '''
+    Endpoint que exibe uma mensagem de boas-vindas
+    '''
     return {'Hello': 'World'}
 
 
 @app.get('/api/restaurantes/')
 def get_restaurantes(restaurante: str = Query(None)):
+    
+    '''
+    Endpoint que retorna o cardápio de um restaurante específico'''
+    
     url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'
 
     response = requests.get(url)
@@ -29,4 +36,4 @@ def get_restaurantes(restaurante: str = Query(None)):
                 })
         return {'Restaurante':restaurante, 'Cardapio':dados_restaurante}
     else:
-        return {'Error': f'{response.status_code}'}
+        return {'Error': f'{response.status_code} - {response.text}'}

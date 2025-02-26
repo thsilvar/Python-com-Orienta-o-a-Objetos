@@ -46,3 +46,6 @@ Projeto Alura
 - iniciar o servidor fastapi
 
     uvicorn main:app --reload
+
+
+-> O fast já vem com swagger só colocar /docs    
