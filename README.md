@@ -34,3 +34,15 @@ Projeto Alura
 - Gerar arquivos onde vai ter todas as versões dos pacotes instalados
 
     pip freeze > requirements.txt
+
+************************************************
+
+- instalar FASTAPI
+
+    pip install fastapi e pip install unicorn e rodar o freeze a cima.
+
+************************************************
+
+- iniciar o servidor fastapi
+
+    uvicorn main:app --reload
